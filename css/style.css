@@ -1,0 +1,128 @@
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root
+{
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body
+{
+    background-color: var(--Cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container
+{
+    background-color: var(--White);
+    border-radius: 10px;
+    display: flex;
+    margin: 50px auto;
+    max-width: 550px;
+}
+
+@media (max-width: 500px)
+{
+    .container
+    {
+        flex-direction: column;
+        max-width: 500px;
+    }    
+}
+
+.container .img img
+{
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.container .text
+{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 20px;
+
+}
+
+.container .text .header
+{
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    font-size: 14px;
+    margin: 15px 0;
+    color: var(--Dark-grayish-blue);
+}
+
+.container .text .title
+{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 37px;
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+.container .text .prefume-description
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 10px 0;
+}
+
+.container .text .price
+{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin: 15px 0px;
+
+}
+
+.container .text .price .after-discount
+{
+    font-family: 'Fraunces', serif;
+    color: var(--Dark-cyan);
+    font-size: 32px;
+
+}
+
+.container .text .price .before-discount
+{
+    color: var(--Dark-grayish-blue);
+    text-decoration: line-through;
+}
+
+.container .text button
+{
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    outline: none;
+    border: none;
+    padding: 12px 0px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.container .text button:hover
+{
+    cursor: pointer;
+    background-color: var(--Very-dark-blue);
+}
